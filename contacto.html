@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacto | Centro Recreativo El Manzano</title>
+  <meta name="description" content="Contacto y ubicación del Centro Recreativo El Manzano.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/theme.css" />
+
+  <!-- Para page-fade -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body data-page="contacto">
+  <div class="page-fade">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container fluid">
+        <div class="navbar">
+          <a class="brand" href="index.html" aria-label="Inicio">
+            <img src="assets/img/logo.png" alt="Logo El Manzano">
+            <div class="t">
+              <strong>Centro Recreativo</strong>
+              <span>El Manzano</span>
+            </div>
+          </a>
+
+          <nav class="navlinks" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="politicas.html">Políticas</a>
+            <a href="calendario.html">Calendario</a>
+            <a href="cotizar.html">Cotizar</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
+
+          <div class="nav-cta">
+            <a class="btn small ghost" href="cotizar.html" aria-label="Ver carrito y cotizar">
+              🧺 <span>Carrito</span>
+              <span class="badge" id="cartCount">0</span>
+            </a>
+            <a class="btn small primary" href="servicios.html">Ver servicios</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <h2>Contáctanos</h2>
+              <p>Envíanos tu consulta y te responderemos lo antes posible.</p>
+            </div>
+          </div>
+
+          <div class="split">
+            <div class="panel reveal">
+              <div class="pad">
+                <h3 style="margin:.2rem 0 .7rem;">Formulario</h3>
+
+                <form class="form" id="contactoForm" autocomplete="on">
+                  <div class="honeypot">
+                    <label>Si eres humano, deja esto vacío</label>
+                    <input id="hp_contacto" name="hp_contacto" tabindex="-1" autocomplete="off">
+                  </div>
+
+                  <div class="field">
+                    <label for="c_nombre">Nombre</label>
+                    <input class="input" id="c_nombre" name="c_nombre" autocomplete="name" placeholder="Tu nombre" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="c_email">Email</label>
+                    <input class="input" id="c_email" name="c_email" type="email" autocomplete="email" placeholder="tucorreo@email.com" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="c_telefono">Teléfono</label>
+                    <input class="input" id="c_telefono" name="c_telefono" autocomplete="tel" placeholder="+56 9 1234 5678" />
+                  </div>
+
+                  <div class="field">
+                    <label for="c_mensaje">Mensaje</label>
+                    <textarea id="c_mensaje" name="c_mensaje" placeholder="Cuéntanos qué necesitas…" required></textarea>
+                  </div>
+
+                  <!-- ✅ type="button" para evitar submit normal -->
+                  <button class="btn primary" id="btnEnviarContacto" type="button">Enviar</button>
+                  <small class="help">Tus datos se usan solo para responder tu consulta.</small>
+                </form>
+              </div>
+            </div>
+
+            <div class="map-wrap reveal" id="ubicacion">
+              <div class="map-embed">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13304.851386599015!2d-70.65525994999999!3d-33.521851299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967d2ba32b61a289%3A0x5fd23c2c497bf2d9!2sRecinto%20Adventista%20El%20Manzano!5e0!3m2!1ses-419!2scl!4v1767801131789!5m2!1ses-419!2scl"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel paper reveal" style="margin-top:1.2rem;">
+            <div class="pad">
+              <h3 style="margin:0 0 .4rem;">Información</h3>
+              <p style="margin:0;">
+                📍 <b>Recinto Adventista El Manzano</b><br>
+                🧾 Precios con IVA incluido.<br>
+                Si quieres, aquí agregamos tu WhatsApp y correo oficial.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ✅ Footer limpio y consistente -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="hero-mark" style="display:inline-flex;">
+            <img src="assets/img/logo.png" alt="Logo El Manzano">
+            <div class="k">
+              <strong>El Manzano</strong>
+              <span>Naturaleza • Aventura • Descanso</span>
+            </div>
+          </div>
+          <p style="margin-top:.9rem; max-width:520px;">
+            Vive una experiencia inolvidable entre montañas, bosque y espacios de descanso.
+            Arma tu cotización y nuestro equipo te contactará.
+          </p>
+          <small>© <span id="y"></span> Centro Recreativo El Manzano.</small>
+          <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+        </div>
+
+        <div>
+          <h3>Links</h3>
+          <p style="margin:.2rem 0"><a href="servicios.html">Servicios</a></p>
+          <p style="margin:.2rem 0"><a href="politicas.html">Políticas</a></p>
+          <p style="margin:.2rem 0"><a href="calendario.html">Calendario</a></p>
+          <p style="margin:.2rem 0"><a href="cotizar.html">Cotizar</a></p>
+          <p style="margin:.2rem 0"><a href="contacto.html">Contacto</a></p>
+        </div>
+
+        <div>
+          <h3>Contacto</h3>
+          <p style="margin:.2rem 0"><small>📍 Recinto Adventista El Manzano</small></p>
+          <p style="margin:.2rem 0"><small>🧾 Precios con IVA incluido</small></p>
+          <div style="margin-top:.8rem; display:flex; gap:.6rem; flex-wrap:wrap;">
+            <a class="btn small primary" href="#contenido">Escribir</a>
+            <a class="btn small ghost" href="#ubicacion">Ver mapa</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" aria-live="polite"></div>
+
+  <!-- ✅ app.js en raíz: SOLO UNA VEZ -->
+  <script src="app.js"></script>
+</body>
+</html>

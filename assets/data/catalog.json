@@ -1,0 +1,105 @@
+{
+  "moneda": "CLP",
+  "nota_precios": "Precios con IVA incluido.",
+  "servicios": [
+    {
+      "id": "camping-dia",
+      "nombre": "Día de Camping",
+      "categoria": "Camping",
+      "descripcion": "Acceso por el día para disfrutar áreas verdes y entorno natural.",
+      "precio_por_persona_noche": 8000,
+      "unidad_cobro": "persona_dia",
+      "imagenes": ["assets/img/g5.jpg", "assets/img/hero.jpg"]
+    },
+    {
+      "id": "habitacion",
+      "nombre": "Habitaciones",
+      "categoria": "Alojamiento",
+      "descripcion": "Habitación estándar para descansar en plena naturaleza.",
+      "precio_por_persona_noche": 12000,
+      "unidad_cobro": "persona_noche",
+      "imagenes": ["assets/img/g2.jpg", "assets/img/g5.jpg"]
+    },
+    {
+      "id": "habitacion-vip",
+      "nombre": "Habitación VIP",
+      "categoria": "Alojamiento",
+      "descripcion": "Mayor comodidad y mejor ubicación. Ideal para escapadas especiales.",
+      "precio_por_persona_noche": 18000,
+      "unidad_cobro": "persona_noche",
+      "imagenes": ["assets/img/g2.jpg", "assets/img/hero.jpg"]
+    },
+    {
+      "id": "habitacion-vip-bano",
+      "nombre": "Habitación VIP con Baño Privado",
+      "categoria": "Alojamiento",
+      "descripcion": "VIP con baño privado para máxima privacidad y confort.",
+      "precio_por_persona_noche": 22000,
+      "unidad_cobro": "persona_noche",
+      "imagenes": ["assets/img/g2.jpg", "assets/img/g5.jpg"]
+    },
+    {
+      "id": "capilla-120-invierno",
+      "nombre": "Capilla 120 personas (Invierno)",
+      "categoria": "Eventos",
+      "descripcion": "Arriendo de capilla con capacidad hasta 120 personas (temporada invierno).",
+      "precio_por_persona_noche": 60000,
+      "unidad_cobro": "dia",
+      "imagenes": ["assets/img/g5.jpg", "assets/img/hero.jpg"]
+    },
+    {
+      "id": "capilla-120-verano",
+      "nombre": "Capilla 120 personas (Verano)",
+      "categoria": "Eventos",
+      "descripcion": "Arriendo de capilla con capacidad hasta 120 personas (temporada verano).",
+      "precio_por_persona_noche": 30000,
+      "unidad_cobro": "dia",
+      "imagenes": ["assets/img/g5.jpg", "assets/img/hero.jpg"]
+    },
+    {
+      "id": "salon-300-invierno",
+      "nombre": "Salón Multiuso 300 personas (Invierno)",
+      "categoria": "Eventos",
+      "descripcion": "Salón multiuso para hasta 300 personas (temporada invierno).",
+      "precio_por_persona_noche": 120000,
+      "unidad_cobro": "dia",
+      "imagenes": ["assets/img/g5.jpg", "assets/img/hero.jpg"]
+    },
+    {
+      "id": "salon-300-verano",
+      "nombre": "Salón Multiuso 300 personas (Verano)",
+      "categoria": "Eventos",
+      "descripcion": "Salón multiuso para hasta 300 personas (temporada verano).",
+      "precio_por_persona_noche": 80000,
+      "unidad_cobro": "dia",
+      "imagenes": ["assets/img/g5.jpg", "assets/img/hero.jpg"]
+    },
+    {
+      "id": "canopy",
+      "nombre": "Canopy",
+      "categoria": "Aventura",
+      "descripcion": "Experiencia canopy para disfrutar la adrenalina con seguridad.",
+      "precio_por_persona_noche": 5000,
+      "unidad_cobro": "persona",
+      "imagenes": ["assets/img/g1.jpg", "assets/img/g4.jpg"]
+    },
+    {
+      "id": "canopy-arbolismo",
+      "nombre": "Canopy y Arbolismo",
+      "categoria": "Aventura",
+      "descripcion": "Pack canopy + circuito de arbolismo.",
+      "precio_por_persona_noche": 7000,
+      "unidad_cobro": "persona",
+      "imagenes": ["assets/img/g1.jpg", "assets/img/g3.jpg"]
+    },
+    {
+      "id": "arbolismo",
+      "nombre": "Arbolismo",
+      "categoria": "Aventura",
+      "descripcion": "Circuito de arbolismo con actividades entre árboles.",
+      "precio_por_persona_noche": 3000,
+      "unidad_cobro": "persona",
+      "imagenes": ["assets/img/g3.jpg", "assets/img/g4.jpg"]
+    }
+  ]
+}

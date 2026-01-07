@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servicios | Centro Recreativo El Manzano</title>
+  <meta name="description" content="Catálogo de servicios: alojamiento, instalaciones y aventura.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/theme.css">
+
+  <!-- Para page-fade -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="servicios">
+<div class="page-fade">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="container fluid">
+    <div class="navbar">
+      <a class="brand" href="index.html" aria-label="Inicio">
+        <img src="assets/img/logo.png" alt="Logo El Manzano">
+        <div class="t">
+          <strong>Centro Recreativo</strong>
+          <span>El Manzano</span>
+        </div>
+      </a>
+
+      <nav class="navlinks" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="politicas.html">Políticas</a>
+        <a href="calendario.html">Calendario</a>
+        <a href="cotizar.html">Cotizar</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn small ghost" href="cotizar.html" aria-label="Ver carrito y cotizar">
+          🧺 <span>Carrito</span>
+          <span class="badge" id="cartCount">0</span>
+        </a>
+        <a class="btn small primary" href="servicios.html">Ver servicios</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="hero">
+    <div class="container wide">
+      <div class="hero-shell reveal" style="min-height: 440px;">
+        <div class="hero-media">
+          <img src="assets/img/hero.jpg" alt="Servicios El Manzano">
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <div class="hero-top">
+            <div class="hero-mark">
+              <img src="assets/img/logo.png" alt="Logo El Manzano">
+              <div class="k">
+                <strong>Servicios</strong>
+                <span>Catálogo</span>
+              </div>
+            </div>
+            <a class="btn small primary" href="cotizar.html">Cotizar ahora</a>
+          </div>
+
+          <div class="hero-copy" style="margin-top: 2.6rem;">
+            <h1 style="font-size: clamp(2.1rem, 3.3vw, 3.4rem);">Elige, agrega al carrito y envía tu solicitud.</h1>
+            <p>Los servicios se cargan dinámicamente desde <code>assets/data/catalog.json</code>.</p>
+          </div>
+
+          <div class="hero-bottom">
+            <div class="kpi">💡 Tip: Haz clic en un servicio para ver galería y detalles.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div id="servicesRoot" class="reveal" style="padding-bottom: 1rem;"></div>
+  </div>
+</main>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="hero-mark" style="display:inline-flex;">
+          <img src="assets/img/logo.png" alt="Logo El Manzano">
+          <div class="k">
+            <strong>El Manzano</strong>
+            <span>Naturaleza • Aventura • Descanso</span>
+          </div>
+        </div>
+        <p style="margin-top:.9rem; max-width:520px;">
+          Vive una experiencia inolvidable entre montañas, bosque y espacios de descanso.
+          Arma tu cotización y nuestro equipo te contactará.
+        </p>
+        <small>© <span id="y"></span> Centro Recreativo El Manzano.</small>
+        <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+      </div>
+
+      <div>
+        <h3>Links</h3>
+        <p style="margin:.2rem 0"><a href="servicios.html">Servicios</a></p>
+        <p style="margin:.2rem 0"><a href="politicas.html">Políticas</a></p>
+        <p style="margin:.2rem 0"><a href="calendario.html">Calendario</a></p>
+        <p style="margin:.2rem 0"><a href="cotizar.html">Cotizar</a></p>
+        <p style="margin:.2rem 0"><a href="contacto.html">Contacto</a></p>
+      </div>
+
+      <div>
+        <h3>Contacto</h3>
+        <p style="margin:.2rem 0"><small>📍 Recinto Adventista El Manzano</small></p>
+        <p style="margin:.2rem 0"><small>🧾 Precios con IVA incluido</small></p>
+        <div style="margin-top:.8rem; display:flex; gap:.6rem; flex-wrap:wrap;">
+          <a class="btn small primary" href="contacto.html">Escribir</a>
+          <a class="btn small ghost" href="index.html#ubicacion">Ver mapa</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

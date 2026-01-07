@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cotizar | Centro Recreativo El Manzano</title>
+  <meta name="description" content="Carrito, formulario y envío de solicitud de cotización.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/theme.css">
+
+  <!-- Para page-fade -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body data-page="cotizar">
+  <div class="page-fade">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container fluid">
+        <div class="navbar">
+          <a class="brand" href="index.html" aria-label="Inicio">
+            <img src="assets/img/logo.png" alt="Logo El Manzano">
+            <div class="t">
+              <strong>Centro Recreativo</strong>
+              <span>El Manzano</span>
+            </div>
+          </a>
+
+          <nav class="navlinks" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="politicas.html">Políticas</a>
+            <a href="calendario.html">Calendario</a>
+            <a href="cotizar.html">Cotizar</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
+
+          <div class="nav-cta">
+            <a class="btn small ghost" href="cotizar.html" aria-label="Ver carrito y cotizar">
+              🧺 <span>Carrito</span>
+              <span class="badge" id="cartCount">0</span>
+            </a>
+            <a class="btn small primary" href="servicios.html">Ver servicios</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero">
+        <div class="container wide">
+          <div class="hero-shell reveal" style="min-height: 430px;">
+            <div class="hero-media">
+              <img src="assets/img/hero.jpg" alt="Cotizar">
+            </div>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+              <div class="hero-top">
+                <div class="hero-mark">
+                  <img src="assets/img/logo.png" alt="Logo El Manzano">
+                  <div class="k">
+                    <strong>Cotizar</strong>
+                    <span>Carrito + Formulario</span>
+                  </div>
+                </div>
+                <a class="btn small ghost" href="servicios.html">Añadir más servicios</a>
+              </div>
+
+              <div class="hero-copy" style="margin-top:2.4rem;">
+                <h1 style="font-size: clamp(2.1rem, 3.2vw, 3.5rem);">Envía tu solicitud</h1>
+                <p>
+                  Revisa tu carrito, completa tus datos y presiona “Enviar cotización”.
+                  Los totales se calculan según el tipo de servicio (por noche / por día / por persona).
+                </p>
+              </div>
+
+              <div class="hero-bottom">
+                <div class="kpi">💰 Total: <b id="cotizacionTotal">$0</b></div>
+                <div class="kpi">🧾 IVA incluido</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="split">
+            <div class="reveal">
+              <div id="cartRoot"></div>
+              <div style="margin-top:1rem;">
+                <a class="btn ghost" href="servicios.html">← Seguir explorando</a>
+              </div>
+            </div>
+
+            <div class="panel reveal">
+              <div class="pad">
+                <h2 style="margin:0 0 .4rem;">Tus datos</h2>
+                <p style="margin:0 0 1rem;">Nos contactaremos para confirmar disponibilidad y detalles.</p>
+
+                <form id="cotizarForm" class="form" autocomplete="on">
+                  <div class="honeypot">
+                    <label>Si eres humano, deja esto vacío</label>
+                    <input id="hp" name="hp" tabindex="-1" autocomplete="off">
+                  </div>
+
+                  <div class="field">
+                    <label for="nombre">Nombre</label>
+                    <input class="input" id="nombre" name="nombre" placeholder="Nombre y apellido" required>
+                  </div>
+
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input class="input" id="email" name="email" type="email" placeholder="tucorreo@email.com" required>
+                  </div>
+
+                  <div class="field">
+                    <label for="telefono">Teléfono</label>
+                    <input class="input" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
+                  </div>
+
+                  <div class="grid" style="grid-template-columns: repeat(2, minmax(0,1fr)); gap:.85rem;">
+                    <div class="field">
+                      <label for="fecha_inicio">Fecha inicio</label>
+                      <input class="input" id="fecha_inicio" name="fecha_inicio" type="date">
+                    </div>
+                    <div class="field">
+                      <label for="fecha_fin">Fecha fin</label>
+                      <input class="input" id="fecha_fin" name="fecha_fin" type="date">
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Detalles (horarios, requerimientos, número de niños, etc.)"></textarea>
+                  </div>
+
+                  <!-- ✅ sin onclick: lo maneja app.js -->
+                  <button id="btnEnviarCotizacion" class="btn primary" type="button">
+                    Enviar cotización
+                  </button>
+
+                  <small class="help">
+                    Al enviar, se llamará a <code>postWebhook('/webhook/cotizacion')</code>.
+                  </small>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ✅ Footer limpio (sin formulario) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="hero-mark" style="display:inline-flex;">
+            <img src="assets/img/logo.png" alt="Logo El Manzano">
+            <div class="k">
+              <strong>El Manzano</strong>
+              <span>Naturaleza • Aventura • Descanso</span>
+            </div>
+          </div>
+          <p style="margin-top:.9rem; max-width:520px;">
+            Vive una experiencia inolvidable entre montañas, bosque y espacios de descanso.
+            Arma tu cotización y nuestro equipo te contactará.
+          </p>
+          <small>© <span id="y"></span> Centro Recreativo El Manzano.</small>
+          <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+        </div>
+
+        <div>
+          <h3>Links</h3>
+          <p style="margin:.2rem 0"><a href="servicios.html">Servicios</a></p>
+          <p style="margin:.2rem 0"><a href="politicas.html">Políticas</a></p>
+          <p style="margin:.2rem 0"><a href="calendario.html">Calendario</a></p>
+          <p style="margin:.2rem 0"><a href="cotizar.html">Cotizar</a></p>
+          <p style="margin:.2rem 0"><a href="contacto.html">Contacto</a></p>
+        </div>
+
+        <div>
+          <h3>Contacto</h3>
+          <p style="margin:.2rem 0"><small>📍 Recinto Adventista El Manzano</small></p>
+          <p style="margin:.2rem 0"><small>🧾 Precios con IVA incluido</small></p>
+          <div style="margin-top:.8rem; display:flex; gap:.6rem; flex-wrap:wrap;">
+            <a class="btn small primary" href="contacto.html">Escribir</a>
+            <a class="btn small ghost" href="index.html#ubicacion">Ver mapa</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
