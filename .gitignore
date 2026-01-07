@@ -1,0 +1,11 @@
+.DS_Store
+.vscode/
+
+.env
+infra/cloudflared/credentials.json
+
+*.log
+node_modules/
+dist/
+build/
+.cache/

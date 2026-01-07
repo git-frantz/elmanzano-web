@@ -1,0 +1,14 @@
+tunnel: elmanzano-tunnel
+credentials-file: /etc/cloudflared/credentials.json
+
+ingress:
+  - hostname: elmanzano.homfsain.com
+    service: http://nginx:80
+
+  - hostname: n8n.elmanzano.homfsain.com
+    service: http://nginx:80
+
+  - hostname: hooks.elmanzano.homfsain.com
+    service: http://nginx:80
+
+  - service: http_status:404
